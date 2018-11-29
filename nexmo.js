@@ -18,7 +18,7 @@ module.exports = {
       {
         "content": {
           "type": "text",
-          "text": "This is an SMS sent from the Messages API"
+          "text": "Somebody needs your help. Follow this link to help him/her: http://boticelli.herokuapp.com/join"
         }
       },
       (err, data) => { console.log(data.message_uuid); }
