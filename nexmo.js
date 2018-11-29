@@ -11,7 +11,7 @@ module.exports = {
       applicationId: "ff35c24a-6155-4c1b-a10f-885512e3f286",
       privateKey: "private.key"
     });
-    
+
     nexmo.channel.send(
       { "type": "sms", "number": "447521175057" },
       { "type": "sms", "number": "447521175057" },
