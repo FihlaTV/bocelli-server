@@ -1,7 +1,10 @@
 const http = require('http');
-const app = require('express')(http);
+const express = require('express');
+const app = express(http);
 
 const bodyParser = require('body-parser');
+
+app.use(express.static('client'))
 
 app.use(bodyParser.json());
 
