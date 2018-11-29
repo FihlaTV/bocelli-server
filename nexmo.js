@@ -18,7 +18,7 @@ module.exports = {
       {
         "content": {
           "type": "text",
-          "text": "Somebody needs your help. Follow this link to help him/her: http://boticelli.herokuapp.com/join"
+          "text": "Somebody needs your help. Follow this link to help him/her: http://boticelli.herokuapp.com/help-someone.html"
         }
       },
       (err, data) => { console.log(data.message_uuid); }
