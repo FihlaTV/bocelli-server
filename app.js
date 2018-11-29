@@ -1,17 +1,18 @@
 const http = require('http');
 const express = require('express');
+const morgan = require('morgan');
+const cors = require('cors');
 const app = express(http);
 
 const bodyParser = require('body-parser');
 
 app.use(express.static('client'))
 
+app.use(morgan('dev'));
 app.use(bodyParser.json());
 
-app.post('/tomer', (req, res, next) => {
-    console.log(req.body);
-    res.send('hi there');
-});
+app.use(cors());
+app.options('*', cors());
 
 const api = require('./routes');
 app.use('/api', api);

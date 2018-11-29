@@ -19,7 +19,7 @@ const users = {};
 router.post('/login', (req, res, next) => {
     const user = users[req.body.username];
     
-    if (!user || user.password !== req.body.password) {
+    if (!user || user.password != req.body.password) {
         const error = new Error(`Unauthorized`);
         error.status = 401;
 
