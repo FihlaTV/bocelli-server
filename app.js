@@ -19,6 +19,8 @@ app.use((req, res, next) => {
     res.send('Not Found');
 })
 
-app.listen(3000, () => {
-    console.log('server is running on port 3000');
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
