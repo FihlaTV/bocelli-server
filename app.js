@@ -18,8 +18,24 @@ app.use('/api', api);
 
 // Not found
 app.use((req, res, next) => {
-    res.status(404);
-    res.send('Not Found');
+    error = new Error('Not Found');
+    error.status = 404;
+
+    next(error);
+});
+
+// Global Error Handler
+app.use((err, req, res, next) => {
+    const status = err.status || 500;
+    res.status(status);
+    
+    const error = {
+        status,
+        message: err.message
+    };
+
+    console.error(error);
+    res.send(error);
 })
 
 const PORT = process.env.PORT || 3000;
