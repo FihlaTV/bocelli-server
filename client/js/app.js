@@ -39,9 +39,9 @@ function initializeSession() {
 }
 
 // replace these values with those generated in your TokBox Account
-var apiKey = "46228432";
-var sessionId = "2_MX40NjIyODQzMn5-MTU0MzQ5ODQ3NjUwMX5pamNMcVhUTnlIWSsrY2VUSFJUMWduZDB-fg";
-var token = "T1==cGFydG5lcl9pZD00NjIyODQzMiZzaWc9OTk0NmFiZDZlYzRjMmRiNzg1N2YwZDYzMzE5NzY5YTA2OWZkZmUyMjpzZXNzaW9uX2lkPTJfTVg0ME5qSXlPRFF6TW41LU1UVTBNelE1T0RRM05qVXdNWDVwYW1OTWNWaFVUbmxJV1NzclkyVlVTRkpVTVdkdVpEQi1mZyZjcmVhdGVfdGltZT0xNTQzNDk4NDkzJm5vbmNlPTAuNDg0MjM3NTQ0MjcxNjU4OSZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTQzNTAyMDkyJmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
+var apiKey = "46228482";
+var sessionId = "2_MX40NjIyODQ4Mn5-MTU0MzQ5OTIyNDYyNH5Yd0paenpZQm1NclM4MlF4V0N1ajNIV2Z-fg";
+var token = "T1==cGFydG5lcl9pZD00NjIyODQ4MiZzaWc9NDIyNDJkZTZkNjdjMGY1ODg1ZjcwOTAwYzk0Y2E4M2YzMjZiZTM0MjpzZXNzaW9uX2lkPTJfTVg0ME5qSXlPRFE0TW41LU1UVTBNelE1T1RJeU5EWXlOSDVZZDBwYWVucFpRbTFOY2xNNE1sRjRWME4xYWpOSVYyWi1mZyZjcmVhdGVfdGltZT0xNTQzNDk5MjU5Jm5vbmNlPTAuOTQ0MjU0MjkxODA3MDk5MyZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTQ0MTA0MDU4JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
 
 // (optional) add server code here
 initializeSession();
