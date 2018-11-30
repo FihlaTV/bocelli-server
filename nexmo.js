@@ -24,6 +24,8 @@ module.exports = {
         }
       },
       (err, data) => {
+        if (err)
+          console.error(err);
         if (data)
           console.log(data.message_uuid);
       }
