@@ -48,6 +48,27 @@ router.get('/help-requests', (req, res, next) => {
     res.send(helpRequests);
 });
 
+router.put('/remove-help-request', (req, res, next) => {
+
+      const helpRequestID = req.body.helpRequestID;
+
+      if (!helpRequestID) {
+          const error = new Error('Bad Request');
+          error.status = 400;
+
+          next(error);
+          return;
+      }
+    for(var i = helpRequests.length - 1; i >= 0; i--) {
+      if(helpRequests[i] === helpRequestID) {
+        array.splice(i, 1);
+      }
+    }
+      res.send({
+          msg: 'Help request removed'
+      });
+});
+
 router.use('/user', routes);
 
 module.exports = router;
