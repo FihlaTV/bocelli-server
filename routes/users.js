@@ -2,11 +2,12 @@ const express = require('express');
 const router = express.Router();
 
 class User {
-    constructor(firstName, lastName, username, password) {
+    constructor(firstName, lastName, username, password, phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
         this.password = password;
+        this.phoneNumber = phoneNumber;
     }
 
     static createFromRequest(user) {

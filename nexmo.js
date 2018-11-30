@@ -13,8 +13,8 @@ module.exports = {
     });
 
     nexmo.channel.send(
-      { "type": "sms", "number": "447521175057" },
-      { "type": "sms", "number": "447521175057" },
+      { "type": "sms", "number": "972525271905" },
+      { "type": "sms", "number": "972525271905" },
       {
         "content": {
           "type": "text",
