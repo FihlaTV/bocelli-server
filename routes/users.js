@@ -19,7 +19,7 @@ const users = {
     tomer: new User('Tomer', 'Amir', 'tomer', '123', '9725271905'),
     inbal: new User('Inbal', 'Ben Dayan', 'inbal', '123', '9725271905'),
     alex: new User('Alex', 'Perles', 'alex', '123', '9725271905'),
-    elena: new User('Elena', '', 'elena', '123', '9725271905')
+    elena: new User('Elena', 'Beneditti', 'elena', '123', '9725271905')
 };
 const subscriptions = [];
 
