@@ -13,7 +13,7 @@ const helpRequests = [
     }
 ];
 
-router.get('/call-for-help', (req, res, next) => {
+router.post('/call-for-help', (req, res, next) => {
     const userID = req.body.userID;
     const text = req.body.text;
     
@@ -65,7 +65,7 @@ router.put('/remove-help-request', (req, res, next) => {
             helpRequests.splice(i, 1);
         }
     }
-    
+
     res.send({
         msg: 'Help request removed'
     });
