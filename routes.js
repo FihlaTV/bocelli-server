@@ -25,11 +25,12 @@ router.post('/call-for-help', (req, res, next) => {
         return;
     }
     
-    helpRequests[`${++reqID}`] = {
+    helpRequests.push({
+        id: ++reqID,
         date: Date.now(),
         userID,
         text
-    };
+    });
     
     for (const loginName of subscriptions) {
         const user = users[loginName];
