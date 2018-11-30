@@ -16,7 +16,7 @@ class User {
 }
 
 const users = {};
-const subscriptions = {};
+const subscriptions = [];
 
 router.post('/login', (req, res, next) => {
     const user = users[req.body.username];
