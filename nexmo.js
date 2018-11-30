@@ -20,7 +20,7 @@ module.exports = {
       {
         "content": {
           "type": "text",
-          "text": `${user} needs your help with ${text}. Follow this link to help him/her: http://bocelli.herokuapp.com/#/chat`
+          "text": `${user} needs your help with: ${text}. Follow this link to help him/her: http://bocelli.herokuapp.com/#/chat`
         }
       },
       (err, data) => {
