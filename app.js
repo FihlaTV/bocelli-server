@@ -14,6 +14,10 @@ app.use(bodyParser.json());
 app.use(cors());
 app.options('*', cors());
 
+app.use('/status', (res, res) => {
+    res.send('OK');
+});
+
 const api = require('./routes');
 app.use('/api', api);
 
