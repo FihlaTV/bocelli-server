@@ -13,12 +13,14 @@ module.exports = {
     });
 
     nexmo.channel.send(
-      { "type": "sms", "number": "972525271905" },
+      // TO
       { "type": "sms", "number": number },
+      // FROM
+      { "type": "sms", "number": "972525271905" },
       {
         "content": {
           "type": "text",
-          "text": "Somebody needs your help. Follow this link to help him/her: http://boticelli.herokuapp.com/help-someone.html"
+          "text": "Somebody needs your help. Follow this link to help him/her: http://bocelli.herokuapp.com/help-someone.html"
         }
       },
       (err, data) => { console.log(data.message_uuid); }
