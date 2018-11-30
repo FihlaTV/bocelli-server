@@ -20,7 +20,6 @@ const subscriptions = {};
 
 router.post('/login', (req, res, next) => {
     const user = users[req.body.username];
-    
     if (!user || user.password != req.body.password) {
         const error = new Error(`Unauthorized`);
         error.status = 401;
@@ -72,6 +71,8 @@ router.put('/subscribe', (req, res, next) => {
 
     const subs = subscriptions[userID] || new Set();
     subs.add(username);
+
+    subscriptions[userID] = subs;
 
     res.status(204).send();
 });
