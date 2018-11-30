@@ -16,11 +16,11 @@ module.exports = {
       // TO
       { "type": "sms", "number": "447521175057" },
       // FROM
-      { "type": "sms", "number": "447521175057" },
+      { "type": "sms", "number": "447418342690" },
       {
         "content": {
           "type": "text",
-          "text": `${user} needs your help with ${text}. Follow this link to help him/her: http://bocelli.herokuapp.com/help-someone.html`
+          "text": `${user} needs your help with ${text}. Follow this link to help him/her: http://bocelli.herokuapp.com/#/chat`
         }
       },
       (err, data) => {
