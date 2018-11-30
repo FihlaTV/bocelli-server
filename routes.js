@@ -6,7 +6,7 @@ const { routes, users, subscriptions } = require('./routes/users');
 let reqID = 1;
 const helpRequests = [
     {
-        id: '1',
+        id: 'Tomer Amir',
         date: Date.now(),
         userID: '1',
         text: 'Do my socks match?'
