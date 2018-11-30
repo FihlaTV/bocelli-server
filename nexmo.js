@@ -3,7 +3,7 @@ const Nexmo = require('nexmo')
 
 
 module.exports = {
-  sendMessage: (number) => {
+  sendMessage: (user, text) => {
 
     const nexmo = new Nexmo({
       apiKey: "195db385",
@@ -14,13 +14,13 @@ module.exports = {
 
     nexmo.channel.send(
       // TO
-      { "type": "sms", "number": number },
+      { "type": "sms", "number": "447521175057" },
       // FROM
-      { "type": "sms", "number": "972525271905" },
+      { "type": "sms", "number": "447521175057" },
       {
         "content": {
           "type": "text",
-          "text": "Somebody needs your help. Follow this link to help him/her: http://bocelli.herokuapp.com/help-someone.html"
+          "text": `${user} needs your help with ${text}. Follow this link to help him/her: http://bocelli.herokuapp.com/help-someone.html`
         }
       },
       (err, data) => {

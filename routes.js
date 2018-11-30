@@ -3,14 +3,38 @@ const router = express.Router();
 const { sendMessage } = require('./nexmo');
 const { routes, users, subscriptions } = require('./routes/users');
 
-let reqID = 1;
+let reqID = 3;
 const helpRequests = [
     {
-        id: 'Tomer Amir',
+        id: 4,
         date: Date.now(),
-        userID: '1',
+        userID: 'Dude',
+        text: 'Where is my car? 🚘'
+    },
+    {
+        id: 5,
+        date: Date.now(),
+        userID: 'Pixies',
+        text: 'Where is my mind?'
+    },
+    {
+        id: 3,
+        date: Date.now(),
+        userID: '🤖',
+        text: 'Can anyone help me find my memory leak?'
+    },
+    {
+        id: 2,
+        date: Date.now(),
+        userID: 'Blind Unicorn 🦄',
+        text: 'Hey Stronzi, help me to find my eggplant 🍆'
+    },
+    {
+        id: 1,
+        date: Date.now(),
+        userID: 'Tomer Amir',
         text: 'Do my socks match?'
-    }
+    },
 ];
 
 router.post('/call-for-help', (req, res, next) => {
@@ -31,14 +55,16 @@ router.post('/call-for-help', (req, res, next) => {
         userID,
         text
     });
+
+    sendMessage(userID, text);
     
-    for (const loginName of subscriptions) {
-        const user = users[loginName];
+    // for (const loginName of subscriptions) {
+    //     const user = users[loginName];
         
-        if (!user || !user.number) continue;
+    //     if (!user || !user.number) continue;
         
-        sendMessage(user.number);
-    }
+    //     sendMessage(user.number);
+    // }
     
     res.send({
         msg: 'Getting Help'
