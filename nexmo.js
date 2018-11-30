@@ -3,7 +3,7 @@ const Nexmo = require('nexmo')
 
 
 module.exports = {
-  sendMessage: () => {
+  sendMessage: (number) => {
 
     const nexmo = new Nexmo({
       apiKey: "195db385",
@@ -14,7 +14,7 @@ module.exports = {
 
     nexmo.channel.send(
       { "type": "sms", "number": "972525271905" },
-      { "type": "sms", "number": "972525271905" },
+      { "type": "sms", "number": number },
       {
         "content": {
           "type": "text",

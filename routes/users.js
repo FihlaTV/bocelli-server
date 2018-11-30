@@ -16,6 +16,7 @@ class User {
 }
 
 const users = {};
+const subscriptions = {};
 
 router.post('/login', (req, res, next) => {
     const user = users[req.body.username];
@@ -57,4 +58,26 @@ router.post('/register', (req, res, next) => {
     res.send(user);
 });
 
-module.exports = router;
+router.put('/subscribe', (req, res, next) => {
+    const userID = req.body.userID;
+    const username = req.body.username;
+
+    if (!userID) {
+        const error = new Error('Bad Request');
+        error.status = 400;
+
+        next(error);
+        return;
+    }
+
+    const subs = subscriptions[userID] || new Set();
+    subs.add(username);
+
+    res.status(204).send();
+});
+
+module.exports = {
+    routes: router,
+    subscriptions,
+    users
+};
