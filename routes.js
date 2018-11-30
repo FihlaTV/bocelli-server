@@ -61,7 +61,7 @@ router.put('/remove-help-request', (req, res, next) => {
       }
     for(var i = helpRequests.length - 1; i >= 0; i--) {
       if(helpRequests[i] === helpRequestID) {
-        array.splice(i, 1);
+        helpRequests.splice(i, 1);
       }
     }
       res.send({
