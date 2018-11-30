@@ -21,7 +21,10 @@ module.exports = {
           "text": "Somebody needs your help. Follow this link to help him/her: http://boticelli.herokuapp.com/help-someone.html"
         }
       },
-      (err, data) => { console.log(data.message_uuid); }
+      (err, data) => {
+        if (data)
+          console.log(data.message_uuid);
+      }
     );
   }
 };
