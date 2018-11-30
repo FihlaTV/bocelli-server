@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.options('*', cors());
 
-app.use('/status', (res, res) => {
+app.use('/status', (req, res) => {
     res.send('OK');
 });
 
