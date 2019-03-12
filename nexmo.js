@@ -6,9 +6,9 @@ module.exports = {
   sendMessage: (user, text) => {
 
     const nexmo = new Nexmo({
-      apiKey: "195db385",
-      apiSecret: "0ESc2zHL9YQiT5ng",
-      applicationId: "ff35c24a-6155-4c1b-a10f-885512e3f286",
+      apiKey: "",
+      apiSecret: "",
+      applicationId: "",
       privateKey: "private.key"
     });
 
